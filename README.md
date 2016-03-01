@@ -18,4 +18,4 @@ The OpenSource tools used are:
 Installation
 ------------
 
-Please refer to document Monitoring ```Alfresco and Tomcat Logs.docx```
+Please refer to document ```Monitoring Alfresco with ElasticSearch.docx```
