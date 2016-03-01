@@ -11,7 +11,7 @@ These tools have been configured to run on Linux servers only so if you are goin
 
 The OpenSource tools used are:
 
-- Logstash - for collecting/tailing log files and output from custom commands and pushing data to ElasticSearch and Graphite.
+- Logstash - for collecting/tailing log files and output from custom commands and pushing data to ElasticSearch.
 - ElasticSearch - Lucene engine to index content.
 - Kibana -  browser based analytics and search dashboard for ElasticSearch.
 
