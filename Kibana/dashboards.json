@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "Alfresco-Logs",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Alfresco Logs",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"Alfresco-Logs-Histogram\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":9,\"size_y\":3,\"col\":1,\"row\":1},{\"id\":\"Alfresco-Logs-Table\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":3,\"size_y\":3,\"col\":10,\"row\":1},{\"id\":\"Alfresco-Java-Class-Table\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":12,\"size_y\":3,\"col\":1,\"row\":8},{\"id\":\"Alfresco-Commands-Table\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":4,\"size_y\":7,\"col\":9,\"row\":11},{\"id\":\"Alfresco-Commands\",\"type\":\"search\",\"panelIndex\":5,\"size_x\":8,\"size_y\":7,\"col\":1,\"row\":11,\"columns\":[\"output\",\"host\"],\"sort\":[\"@timestamp\",\"desc\"]},{\"id\":\"Alfresco-Logs\",\"type\":\"search\",\"panelIndex\":6,\"size_x\":12,\"size_y\":4,\"col\":1,\"row\":4,\"columns\":[\"logLevel\",\"class\",\"Msg\",\"path\",\"host\"],\"sort\":[\"@timestamp\",\"desc\"]}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now/d",
+      "timeFrom": "now/d",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-System",
+    "_type": "dashboard",
+    "_source": {
+      "title": "NodeX System",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":7,\"id\":\"NodeX-Users-and-Tickets\",\"panelIndex\":2,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NodeX-Heap-Memory\",\"panelIndex\":3,\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"NodeX-Server-Memory\",\"panelIndex\":4,\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":5,\"id\":\"NodeX-Tomcat-AJP-Threads\",\"panelIndex\":8,\"row\":16,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"NodeX-Tomcat-SSL-Threads\",\"panelIndex\":9,\"row\":16,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"NodeX-Java-Threads-Count\",\"panelIndex\":15,\"row\":19,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Alfesco1-Tomcat-HTTP-Threads\",\"panelIndex\":19,\"row\":16,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NodeX-CPU\",\"panelIndex\":20,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NodeX-Workflows\",\"panelIndex\":21,\"row\":19,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"NodeX-Solr-Remaining-Transactions\",\"panelIndex\":22,\"row\":22,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NodeX-DB-Connections\",\"panelIndex\":23,\"row\":22,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NodeX-Tomcat-Response-Time\",\"panelIndex\":24,\"row\":7,\"size_x\":9,\"size_y\":4,\"type\":\"visualization\"},{\"col\":10,\"id\":\"NodeX-Tomcat-Response-Count\",\"panelIndex\":25,\"row\":7,\"size_x\":3,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NodeX-Open-File-Descriptors\",\"panelIndex\":26,\"row\":25,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"NodeX-Disk-Space\",\"panelIndex\":27,\"row\":25,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"verb\",\"request\",\"response\",\"responseTime\",\"thread\",\"host\"],\"id\":\"NodeX-Tomcat-Access-Log\",\"panelIndex\":28,\"row\":11,\"size_x\":12,\"size_y\":5,\"sort\":[\"@timestamp\",\"desc\"],\"type\":\"search\"}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"colors\":{\"alfrescocpu\":\"#BF1B00\",\"idlecpu\":\"#3F6833\",\"systemcpu\":\"#1F78C1\",\"usercpu\":\"#64B0C8\"}}},\"P-15\":{\"vis\":{\"colors\":{\"Max value\":\"#629E51\"}}},\"P-19\":{\"vis\":{\"colors\":{\"max_threads\":\"#BF1B00\",\"threads_busy\":\"#629E51\",\"threads_count\":\"#E5AC0E\"}}},\"P-2\":{\"vis\":{\"colors\":{\"share_sessions\":\"#629E51\",\"tickets_non_expired\":\"#E5AC0E\",\"users_non_expired\":\"#BF1B00\"}}},\"P-23\":{\"vis\":{\"colors\":{\"active_db_conns\":\"#629E51\",\"max_db_conns\":\"#BF1B00\"}}},\"P-27\":{\"vis\":{\"colors\":{\"free_disk_space\":\"#629E51\",\"total_disk_space\":\"#BF1B00\"}}},\"P-3\":{\"vis\":{\"colors\":{\"alfresco.heap_memory.heapmemoryusage.committed\":\"#E5AC0E\",\"alfresco.heap_memory.heapmemoryusage.max\":\"#BF1B00\",\"alfresco.heap_memory.heapmemoryusage.used\":\"#508642\",\"committed\":\"#E5AC0E\",\"max\":\"#BF1B00\",\"used\":\"#629E51\"}}},\"P-4\":{\"vis\":{\"colors\":{\"alfresco.operating_system.freephysicalmemorysize\":\"#E5AC0E\",\"alfresco.operating_system.totalphysicalmemorysize\":\"#BF1B00\",\"free_physical\":\"#E5AC0E\",\"free_swap\":\"#64B0C8\",\"total_physical\":\"#BF1B00\",\"total_swap\":\"#0A50A1\"}}},\"P-7\":{\"vis\":{\"colors\":{\"alfresco.tomcat_http_threads.currentthreadcount\":\"#E5AC0E\",\"alfresco.tomcat_http_threads.currentthreadsbusy\":\"#629E51\",\"alfresco.tomcat_http_threads.maxthreads\":\"#BF1B00\"}}},\"P-8\":{\"vis\":{\"colors\":{\"alfresco.tomcat_ajp_threads.currentthreadcount\":\"#E5AC0E\",\"alfresco.tomcat_ajp_threads.currentthreadsbusy\":\"#629E51\",\"alfresco.tomcat_ajp_threads.maxthreads\":\"#BF1B00\",\"max_threads\":\"#BF1B00\",\"threads_busy\":\"#629E51\",\"threads_count\":\"#E5AC0E\"}}},\"P-9\":{\"vis\":{\"colors\":{\"alfresco.tomcat_ssl_threads.currentthreadcount\":\"#E5AC0E\",\"alfresco.tomcat_ssl_threads.currentthreadsbusy\":\"#629E51\",\"alfresco.tomcat_ssl_threads.maxthreads\":\"#BF1B00\",\"max_threads\":\"#BF1B00\",\"threads_busy\":\"#629E51\",\"threads_count\":\"#E5AC0E\"},\"legendOpen\":true}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now/d",
+      "timeFrom": "now/d",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  }
+]

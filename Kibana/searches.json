@@ -1,0 +1,394 @@
+[
+  {
+    "_id": "Alfresco-Commands",
+    "_type": "search",
+    "_source": {
+      "title": "Alfresco Commands",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "output",
+        "host"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"type:command\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "Alfresco-Logs",
+    "_type": "search",
+    "_source": {
+      "title": "Alfresco Logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "logLevel",
+        "class",
+        "Msg",
+        "path",
+        "host"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"_exists_:logLevel\"}}}"
+      }
+    }
+  },
+  {
+    "_id": "AllData",
+    "_type": "search",
+    "_source": {
+      "title": "AllData",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Tomcat-SSL-Threads",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Tomcat SSL Threads",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"host:NodeX && (\\\"alfresco.Tomcat_SSL_Threads.MaxThreads\\\" | \\\"alfresco.Tomcat_SSL_Threads.currentThreadCount\\\" | \\\"alfresco.Tomcat_SSL_Threads.currentThreadsBusy\\\")\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Users-and-Tickets",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Users and Tickets",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"host:NodeX && (\\\"alfresco.Repo_Server_Mgmt.UserCountNonExpired\\\"|\\\"alfresco.Repo_Server_Mgmt.TicketCountNonExpired\\\"|\\\"alfresco.Share_Active_Sessions.activeSessions\\\")\"}}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-User-CPU",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX User CPU",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"query\":{\"query_string\":{\"query\":\"+NodeX +tags:UserCPU\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Solr-Remaining-Transactions",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Solr Remaining Transactions",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "metric_path",
+        "metric_value_string"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"query\":{\"query_string\":{\"query\":\"host:NodeX && (\\\"alfresco.SorlIndexing.tracker.alfresco.approx.txns.remaining\\\" | \\\"alfresco.SorlIndexing.tracker.archive.approx.txns.remaining\\\")\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Tomcat-HTTP-Threads",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Tomcat HTTP Threads",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"host:NodeX && (\\\"alfresco.Tomcat_HTTP_Threads.MaxThreads\\\" | \\\"alfresco.Tomcat_HTTP_Threads.currentThreadCount\\\" | \\\"alfresco.Tomcat_HTTP_Threads.currentThreadsBusy\\\")\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Workflows",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Workflows",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"host:NodeX && (\\\"alfresco.Workflow_Information.NumberOfActivitiTaskInstances\\\"|\\\"alfresco.Workflow_Information.NumberOfActivitiWorkflowInstances\\\"|\\\"alfresco.Workflow_Information.NumberOfActivitiWorkflowDefinitionsDeployed\\\")\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Tomcat-AJP-Threads",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Tomcat AJP Threads",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"host:NodeX && (\\\"alfresco.Tomcat_AJP_Threads.MaxThreads\\\" | \\\"alfresco.Tomcat_AJP_Threads.currentThreadCount\\\" | \\\"alfresco.Tomcat_AJP_Threads.currentThreadsBusy\\\")\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Disk-Space",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Content Store Disk Space",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"query\":{\"query_string\":{\"query\":\"metric_path:alfresco.Disk_ContentStore.SpaceFree | metric_path:alfresco.Disk_ContentStore.SpaceTotal\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-CPU",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX CPU",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"query\":{\"query_string\":{\"query\":\"host:NodeX && (type:ServerCPU | type:AlfrescoCPU)\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Server-Memory",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Server Memory",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"host:NodeX && (alfresco.Operating_System.FreeSwapSpaceSize | alfresco.Operating_System.TotalSwapSpaceSize | alfresco.Operating_System.FreePhysicalMemorySize | alfresco.Operating_System.TotalPhysicalMemorySize)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Solr-Commits",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Solr Commits",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"query\":{\"query_string\":{\"query\":\"host:NodeX && metric_path:alfresco.Solr_Commits.commits\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Open-File-Descriptors",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Open File Descriptors",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"query\":{\"query_string\":{\"query\":\"host:NodeX && alfresco.Operating_System.OpenFileDescriptorCount\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Heap-Memory",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Heap Memory",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"host:NodeX && (alfresco.Heap_Memory.HeapMemoryUsage.max | alfresco.Heap_Memory.HeapMemoryUsage.committed | alfresco.Heap_Memory.HeapMemoryUsage.used)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-DB-Connection-Pool",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX DB Connection Pool",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"host:NodeX && (\\\"alfresco.DB_Connection_Pool.MaxActive\\\"|\\\"alfresco.DB_Connection_Pool.NumActive\\\")\"}}}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Java-Threads-Count",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Java Threads Count",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "metric_path",
+        "value"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"jmx-*\",\"query\":{\"query_string\":{\"query\":\"host:NodeX && metric_path:\\\"alfresco.Java_Threads.ThreadCount\\\"\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NodeX-Tomcat-Access-Log",
+    "_type": "search",
+    "_source": {
+      "title": "NodeX Tomcat Access Log",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "verb",
+        "request",
+        "response",
+        "responseTime",
+        "thread",
+        "host"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tomcat-*\",\"query\":{\"query_string\":{\"query\":\"host:NodeX && type:TomcatAccessLog\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+      }
+    }
+  }
+]
